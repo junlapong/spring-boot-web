@@ -1,0 +1,59 @@
+<#import "layouts/main-layout.ftl.html" as main> 
+<@main.page>
+<script src="js/home.js"></script>
+<div class="container">
+    <form method="post" action="/" role="form" class="form-horizontal">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3>Server Date : ${serverTime?date}</h3>
+            </div>
+        </div>
+
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+            </tr>
+            <#list customerLst as customer>
+            <tr>
+                <td>
+                    ${customer.firstName}
+                </td>
+                <td>
+                    ${customer.lastName}
+                </td>
+            </tr>
+            
+            </#list>
+        </table>
+
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">First Name</label>
+            <div class="col-md-10">
+                <input type="text" name="firstName" class="form-control" placeholder="Enter First Name">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">Last Name</label>
+            <div class="col-md-10">
+                <input type="text" name="lastName" class="form-control" placeholder="Enter Last Name">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-10">
+                <input type="submit" name="action" value="Submit" class="btn btn-primary btn-lg btn-block"/>
+            </div>
+        </div>
+    </form>
+</div>
+</@main.page> 

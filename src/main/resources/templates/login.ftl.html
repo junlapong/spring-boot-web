@@ -1,0 +1,26 @@
+<#import "layouts/login-layout.ftl.html" as main> 
+<@main.page>
+<div class="container">
+    
+    
+    <form method="post" action="/login" role="form" class="form-horizontal">
+        <div class="row">
+            <div class="col-md-offset-5 col-md-3">
+                <div class="form-login">
+                    <h4>Login</h4>
+                    <input type="text" name="username" class="form-control input-sm chat-input" value="bob"/>
+                    </br>
+                    <input type="password" name="password" class="form-control input-sm chat-input" value="bobspassword"/>
+                    </br>
+                    <div class="wrapper">
+                        <span class="group-btn">     
+                            <input type="submit" name="action" value="Sign In" class="btn btn-primary btn-lg btn-block"/>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>
+</@main.page> 

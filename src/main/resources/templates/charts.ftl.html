@@ -1,0 +1,27 @@
+<#import "layouts/main-layout.ftl.html" as main> 
+<@main.page>
+<script src="js/highcharts.js"></script>
+<script src="js/exporting.js"></script>
+<script src="js/charts.js"></script>
+<div class="container">
+    <form method="post" action="/charts" role="form" class="form-horizontal">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="piechartContainer" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+            </div> 
+            <div class="col-md-6">
+                <div id="columnchartContainer" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="linechartContainer" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+            </div> 
+            <div class="col-md-6">
+                <div id="areachartContainer" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+            </div>
+        </div>
+
+    </form>
+</div>
+</@main.page> 
